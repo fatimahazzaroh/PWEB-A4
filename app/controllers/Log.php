@@ -6,7 +6,7 @@ class Log extends Controller
     {
         $data['title'] = 'Login';
         $this->view('templates/header', $data);
-        $this->view('auth/login');
+        $this->view('auth/index');
         $this->view('templates/footer');
     }
 

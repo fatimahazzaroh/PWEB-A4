@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elliot</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap">
+
+
+    <!-- Iconts -->
+    
+
+
+    <!-- CSS -->
+    <style>
+        :root{
+    --primary: rgb(255, 255, 255);
+    --bg: #62005F;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: white;
+    overflow-y: hidden;
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4 rem 7%;
+    border-bottom: 1px solid #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    margin-right: 0px;
+    background-color: #62005F;
+}
+
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    font-size: 22px; /* Ukuran font yang lebih besar */
+    font-weight: 400;
+    line-height: 24px;
+    color: #FBCE4D ; /* Warna teks putih */
+    font-style: normal;
+    font-family: 'Aclonica', sans-serif;
+}
+
+.navbar-logo span {
+    margin-top: 10px;
+    margin-left: 5px;
+    color: #fff;
+}
+
+.logo {
+    margin-top: 10px;
+    margin-bottom: 0%;
+    width: 50px; /* Atur ukuran logo sesuai kebutuhan */
+    height: auto; /* Biarkan tinggi mengikuti proporsi aslinya */
+    margin-right: 0px; /* Jarak antara logo dan teks */
+    margin-left: 10px;
+}
+
+.gambar_homepage {
+    display: inline-block;
+    vertical-align: top; /* Mengatur posisi vertikal agar sejajar */
+    position: fixed;
+    width: 676px;
+    height: auto;
+    margin-top: 100px;
+    margin-left: 780px;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: 700px;
+    height: 620px;
+    left: 69px;
+    top: 85px;
+    background: rgba(228, 129, 226, 0.54);
+    border-radius: 40px;
+}
+.login-container h2{
+    margin-top: 5px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #161c2c;
+}
+.login-container p{
+    text-align: center;
+}
+.login-container p a{
+    color: #0B8FAC;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Email */
+.form-group label[for="email"],
+.form-group input[type="email"] {
+    display: flex;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #242E49;
+    width: 1000px;
+    margin-bottom: 5px;
+}
+
+.form-group label[for="email"] {
+    width: 50px;
+}
+
+.form-group input[type="email"] {
+    width: 80px;
+}
+#email{
+    background-color: #ffffff4d;
+    width: 500px;
+    height: 35px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* nama */
+.form-group label[for="nama"],
+.form-group input[type="nama"] {
+    display: flex;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #242E49;
+    width: 1000px;
+    margin-bottom: 10px;
+
+}
+
+.form-group label[for="nama"] {
+    width: 50px;
+}
+
+.form-group input[type="nama"] {
+    width: 80px;
+}
+
+#nama{
+    background-color: #ffffff4d;
+    width: 500px;
+    height: 35px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* notel */
+.form-group label[for="notel"],
+.form-group input[type="notel"] {
+    display: flex;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #242E49;
+    width: 1000px;
+    margin-bottom: 10px;
+}
+
+.form-group label[for="notel"] {
+    width: 50px;
+}
+
+.form-group input[type="notel"] {
+    width: 80px;
+}
+
+#notel{
+    background-color: #ffffff4d;
+    width: 500px;
+    height: 35px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* alamat */
+.form-group label[for="alamat"],
+.form-group input[type="alamat"] {
+    display: flex;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #242E49;
+    width: 1000px;
+    margin-bottom: 10px;
+
+}
+
+.form-group label[for="alamat"] {
+    width: 50px;
+}
+
+.form-group input[type="alamat"] {
+    width: 80px;
+}
+#alamat{
+    background-color: #ffffff4d;
+    width: 500px;
+    height: 35px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* Password */
+.form-group label[for="password"],
+.form-group input[type="password"] {
+    display: flex;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #242E49;
+    width: 1000px;
+    margin-bottom: 10px;
+
+}
+
+#password{
+    background-color: #ffffff4d;
+    width: 500px;
+    height: 35px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.form-group label[for="password"] {
+    width: 50px;
+}
+
+.form-group input[type="password"] {
+    width: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Group 1 */
+.form-submit button{
+    font-family: 'Poppins', sans-serif;
+    background-color: #FF4167;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    width: 500px;
+    height: 40px;
+    color: #fff;
+    
+}
+
+.form-submit button:hover {
+    background-color: #621c8a;
+}
+
+
+
+    </style>
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">
+            <img src="logo.svg" alt="Logo" class="logo">
+            <span>Elliot</span>
+        </a>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- tengah -->
+    <div class="login-container">
+        <h2 class="header-text">Yuk, daftar untuk mengakses Elliot!</h2>
+        <div class="background">
+        <form action="#" method="post" class="form-container">
+            <div class="form-group">
+                <label for="nama" class="nama">Nama</label>
+                <input type="nama" id="nama" name="nama" >
+            </div>
+            <div class="form-group">
+                <label for="notel" class="notel">No telepon</label>
+                <input type="notel" id="notel" name="notel" >
+            </div>
+            <div class="form-group">
+                <label for="alamat" class="alamat">Alamat</label>
+                <input type="alamat" id="alamat" name="alamat" >
+            </div>
+            <div class="form-group">
+                <label for="email" class="email">Email</label>
+                <input type="email" id="email" name="email" >
+            </div>
+            <div class="form-group">
+                <label for="password" class="password">Password</label>
+                <input type="password" id="password" name="password" >
+            </div>
+            <div class="form-submit">
+                <button type="submit" class="submit-btn">Daftar</button>
+            </div>
+        </form>
+        </div>
+        <p class="sign-up-link">Sudah punya akun? <a href="Login-blade.html">Login</a></p>
+    </div>
+
+
+    <div class="gambarhomepage">
+        <img src="Bghomepage.png" class="gambar_homepage">
+    </div>
+    </div>
+
+
+    
+</body>
+</html>

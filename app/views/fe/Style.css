@@ -598,3 +598,205 @@ body{
     background-color: #621c8a;
 }
 
+
+
+
+
+
+
+
+.navbar2 {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4 rem 7%;
+    border-bottom: 1px solid #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    margin-right: 0px;
+    background-color: #62005F;
+}
+
+.navbar-logo2 {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    font-size: 22px; /* Ukuran font yang lebih besar */
+    font-weight: 400;
+    line-height: 24px;
+    color: #FBCE4D ; /* Warna teks putih */
+    font-style: normal;
+    font-family: 'Aclonica', sans-serif;
+}
+
+.navbar-logo2 span {
+    margin-top: 10px;
+    margin-left: 5px;
+    color: #fff;
+}
+
+.logo2 {
+    margin-top: 10px;
+    margin-bottom: 0%;
+    width: 50px; /* Atur ukuran logo sesuai kebutuhan */
+    height: auto; /* Biarkan tinggi mengikuti proporsi aslinya */
+    margin-right: 0px; /* Jarak antara logo dan teks */
+    margin-left: 10px;
+}
+
+.gambar_homepage2 {
+    display: inline-block;
+    vertical-align: top; /* Mengatur posisi vertikal agar sejajar */
+    position: fixed;
+    width: 676px;
+    height: auto;
+    margin-top: 100px;
+    margin-left: 780px;
+}
+
+.login-container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: 700px;
+    height: 550px;
+    left: 69px;
+    top: 141px;
+    background: rgba(228, 129, 226, 0.54);
+    border-radius: 40px;
+}
+
+.login-container2 h2{
+    margin-top: -10px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #161c2c;
+}
+
+.login-container2 p{
+    text-align: center;
+}
+
+.login-container2 p a{
+    color: #0B8FAC;
+}
+
+.form-container2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Email */
+.form-group2 label[for="email2"],
+.form-group2 input[type="email2"] {
+    display: flex;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #242E49;
+    width: 1000px;
+    margin-bottom: 10px;
+}
+
+.form-group2 label[for="email2"] {
+    width: 57px;
+}
+
+.form-group2 input[type="email2"] {
+    width: 100px;
+}
+
+/* Password */
+.form-group2 label[for="password2"],
+.form-group2 input[type="password2"] {
+    display: flex;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #242E49;
+    width: 1000px;
+    margin-bottom: 10px;
+}
+
+#email2{
+    background-color: #ffffff4d;
+    width: 500px;
+    height: 45px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+#password2{
+    background-color: #ffffff4d;
+    width: 500px;
+    height: 45px;
+    border-radius: 12px;
+    margin-bottom: 80px;
+}
+
+.form-group2 label[for="password2"] {
+    width: 100px;
+}
+
+.form-group2 input[type="password2"] {
+    width: 100px;
+}
+
+/* Group 2 */
+.forgot-password {
+    width: 507.68px;
+    height: 52.69px;
+    margin-top: 5px;
+    margin-left: 470px;
+}
+.forgot-password a{
+    font-size: 14px;
+    color: #000000;
+    border-bottom: solid black 1px;
+}
+
+
+
+/* Enter Your Email */
+.forgot-password .enter-email {
+    height: 14px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #858585;
+}
+
+/* Group 1 */
+.form-submit button{
+    font-family: 'Poppins', sans-serif;
+    background-color: #FF4167;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    width: 500px;
+    height: 50px;
+    color: #fff;
+}
+
+.form-submit button:hover {
+    background-color: #621c8a;
+}

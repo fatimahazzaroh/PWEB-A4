@@ -28,6 +28,9 @@ class Database {
     public function query($query) {
         $this->stmt = $this->dbh->prepare($query);
     }
+    public function queryReturn($query) {
+        return $this->stmt = $this->dbh->prepare($query);
+    }
 
     public function bind($param, $value, $type = null) {
         if (is_null($type)) {
@@ -61,5 +64,13 @@ class Database {
     public function single() {
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function rowCount() {
+        return $this->stmt->rowCount();
+    }
+
+    public function lastInsertId() {
+        return $this->dbh->lastInsertId();
     }
 }

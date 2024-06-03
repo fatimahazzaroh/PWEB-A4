@@ -1,6 +1,6 @@
 <?php
 
-define('BASEURL', 'http://localhost/PWEB/PWEB-A4/public');
+define('BASEURL', 'http://localhost/PWEB/PWEB-A4-BARU');
 
 // DB
 define('DB_HOST', 'localhost');

@@ -6,6 +6,7 @@ require_once 'core/Flasher.php';
 
 require_once 'config/config.php';
 
+<<<<<<< HEAD
 session_start();
 
 // // Debugging: Periksa apakah session sudah dimulai
@@ -15,3 +16,6 @@ session_start();
 // } else {
 //     // echo "Session sudah dimulai sebelumnya di init.php";
 // }
+=======
+session_start();
+>>>>>>> dbabee18a9b5e9f09dd3ffe09b497ccdf2b1a95c

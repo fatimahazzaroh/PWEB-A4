@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <section>
+<!-- Navbar side -->
+    <nav class="navbar">
+        <div class="navbar-top">
+            <a href="#" class="navbar-logo">
+                <img src="../logo.svg" alt="Logo" class="logo">
+                <span class="brand-name">Elliot</span>
+            </a>
+            <ul class="navbar-menu">
+                <li><a href="#" class="navbar-item"><i data-feather="home"></i><span>Kamar</span></a></li>
+                <li><a href="#" class="navbar-item"><i data-feather="book-open"></i><span>Booking</span></a></li>
+                <li><a href="#" class="navbar-item"><i data-feather="archive"></i><span>Report</span></a></li>
+                <li><a href="#" class="navbar-item"><i data-feather="bookmark"></i><span>Riwayat</span></a></li>
+            </ul>
+        </div>
+        <div class="navbar-bottom">
+            <a href="#" class="bottom-item">
+                <button class="logout-button">Log Out</button>
+            </a>
+
+            <a href="#" class="bottom-item">
+                <i data-feather="user"></i>
+                <span>Customer</span>
+            </a>
+        </div>
+    </nav>
+    <!-- navbar side end -->
+    <div class="content">
+        <!-- Content area --> 
+        <h2>Riwayat Penitipan</h2>
+        <div class="garis"></div>
+        <div class="container-table">
+            <table>
+                <thead>
+                    <tr>
+                    <th>No</th>
+                    <th>Nama Customer</th>
+                    <th>Tanggal Penitipan</th>
+                    <th>Tanggal Pengambilan</th>
+                    <th>Jenis Kamar</th>
+                    <th>Laporan</th>
+                    <th>Total Pembayaran</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2-6-2024</td>
+                        <td>4-6-2024</td>
+                        <td>Pawtopia</td>
+                        <td>Miyong</td>
+                        <td><a href="path/to/report1.pdf" target="_blank">Laporan</a></td>
+                        <td>Rp.100.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </section>
+    <script>
+        feather.replace();
+      </script>
+    
+
+</body>
+</html>

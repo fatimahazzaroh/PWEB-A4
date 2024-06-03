@@ -28,5 +28,18 @@ isset digunakan untuk cek apakah suatu variabel telah diberi value atau belum.
 alt+panah atas = pindah ke atas
 shift+alt+panah bawah = copy ke bawah
 
+public function tambahKamar($data) 
+        $query = "INSERT INTO jenis_kamar (id, jenis_kamar, harga, deskripsi)
+                    VALUES
+                    (?, :jenis_kamar, :harga, :deskripsi)";
+        $this->db->query($query);
+        $this->db->bind('jenis_kamar', $data['jenis_kamar']);
+        jenis_kamar yg pertama sesuai dengan values, jenis kama yg kedua sesuai dengan name yg ada di form
 
+<div>
+    <form action="<?= BASEURL; ?>/kamar/tambahBaru" method="post"> 
+    itu tambahBaru methodenya di controller
 
+$_SESSION = mekanisme penyimpanan informasi kedalam variabel 
+agar bisa digunakan di lebih dari satu halaman
+-jalankan session_start()

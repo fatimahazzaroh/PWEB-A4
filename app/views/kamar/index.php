@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="content">
         <!-- Content area -->
         <h2>JENIS KAMAR PENITIPAN <br> ELLIOT PETSHOP</h2>
@@ -42,6 +43,11 @@
     </script>
 
 <!-- <div>
+=======
+<div>
+    <button><a href="<?= BASEURL; ?> /kamar/tambah/">Tambah kamar</a></button> ? 
+    <!-- ke controller tambah -->
+>>>>>>> dbabee18a9b5e9f09dd3ffe09b497ccdf2b1a95c
     <h1>Daftar Kamar</h1>
     <table border="1px">
         <thead>
@@ -99,6 +105,7 @@
             <?php endforeach; ?>
         </tbody>
     </table>
+<<<<<<< HEAD
 </div> -->
 
 
@@ -111,3 +118,6 @@
         modal.find('.modal-body input#id').val(id); // Pass the ID to the input field
     });
 </script> -->
+=======
+</div>
+>>>>>>> dbabee18a9b5e9f09dd3ffe09b497ccdf2b1a95c

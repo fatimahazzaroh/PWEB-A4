@@ -18,7 +18,7 @@ class Penitipan_model {
             WHERE p.status_id = 1';
 
         if ($roles_id == 3) {
-            $query .= ' WHERE p.individuals_id = :individuals_id';
+            $query .= ' AND p.individuals_id = :individuals_id';
         } 
         $this->db->query($query);
         if ($roles_id == 3) {
@@ -46,7 +46,7 @@ class Penitipan_model {
             JOIN status s ON p.status_id = s.id
             WHERE p.status_id = 2';
         if ($roles_id == 3) {
-            $query .= ' WHERE p.individuals_id = :individuals_id';
+            $query .= ' AND p.individuals_id = :individuals_id';
         } 
         $this->db->query($query);
         if ($roles_id == 3) {
@@ -65,7 +65,7 @@ class Penitipan_model {
             JOIN status s ON p.status_id = s.id
             WHERE p.status_id = 3';
         if ($roles_id == 3) {
-            $query .= ' WHERE p.individuals_id = :individuals_id';
+            $query .= ' AND p.individuals_id = :individuals_id';
         } 
         $this->db->query($query);
         if ($roles_id == 3) {

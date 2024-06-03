@@ -43,7 +43,8 @@
                                 <button type="submit">Update</button>
                             </form>
                         </td>
-                    <?php endif; ?>
+                        <?php endif; ?>
+                        <td><a href="<?= BASEURL ?>/report/detailReport/<?= $penitipan['id'] ?>">Lihat Report</a></td>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>

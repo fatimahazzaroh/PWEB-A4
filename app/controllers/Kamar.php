@@ -29,4 +29,22 @@ class Kamar extends Controller {
             $this->view( 'templates/footer' );
         }
     }
+
+    public function addKamar() {
+        if (isset($_POST['jenis_kamar']) && isset($_POST['harga']) && isset($_POST['deskripsi'])) {
+            if ($this->model('Kamar_model')->addKamar($_POST) > 0) {
+                Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+                header('location: ' . BASEURL . '/kamar');
+                exit;
+            } else {
+                Flasher::setFlash('gagal', 'ditambahkan', 'danger');
+                header('location: ' . BASEURL . '/kamar');
+                exit;
+            }
+        } else {
+            Flasher::setFlash('gagal', 'ditambahkan', 'danger');
+            header('location: ' . BASEURL . '/kamar');
+            exit;
+        }
+    }
 }

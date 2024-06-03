@@ -2,6 +2,11 @@
         <!-- Content area -->
         <h2>JENIS KAMAR PENITIPAN <br> ELLIOT PETSHOP</h2>
         <div class="garis"></div>
+        <!-- Button trigger modal Tambah Kamar -->
+        <button type="button" class="btn btn-primary" style="float: right; background-color: #FF4167;" data-bs-toggle="modal" data-bs-target="#formKamar">
+            Tambah Kamar
+        </button>
+        
         <div class="container-table">
             <table>
                 <thead>
@@ -11,9 +16,10 @@
                         <th>Harga</th>
                         <th>Jumlah</th>
                         <th>Deskripsi</th>
-                        <?php if ($data['roles_id'] == 2) : ?>
+                        <th>Aksi</th>
+                        <!-- <?php if ($data['roles_id'] == 2) : ?>
                             <th class="action"><button class="Add"><a href="Staff-FormKamar.html">+ New</button></th>
-                        <?php endif; ?>
+                        <?php endif; ?> -->
                     </tr>
                 </thead>
                 <tbody>
@@ -41,6 +47,37 @@
         feather.replace();
     </script>
 
+<!-- Modal -->
+<div class="modal fade" id="formKamar" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Tambah Kamar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="kamarForm" method="POST" enctype="multipart/form-data" action="<?= BASEURL; ?>/kamar/addKamar">
+                    <div class="mb-3">
+                        <label for="jenis_kamar" class="form-label">Jenis Kamar</label>
+                        <input type="text" class="form-control" id="jenis_kamar" name="jenis_kamar" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="harga" class="form-label">Harga</label>
+                        <input type="text" class="form-control" id="harga" name="harga" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="deskripsi" class="form-label">Deskripsi</label>
+                        <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" required></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- <div>
     <h1>Daftar Kamar</h1>
     <table border="1px">

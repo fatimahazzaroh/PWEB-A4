@@ -7,9 +7,10 @@
 
         <!-- <div class="action"><button class="Add" onclick="window.location.href='Staff-FormReport.html'"> + New </button></div> -->
         <!-- Button trigger modal Tambah Report -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formLaporan">
+        <button type="button" class="btn btn-primary" style="float: right; background-color: #FF4167;" data-bs-toggle="modal" data-bs-target="#formLaporan">
             Tambah Laporan
         </button>
+
         <div class="garis"></div>
         <div class="container-table">
             <table>
@@ -27,7 +28,7 @@
                         <td><?= $index + 1 ?></td>
                         <td><?= $report['tanggal'] ?></td>
                         <td><?= $report['deskripsi'] ?></td>
-                        <td>gambar</td>
+                        <td><img src="<?= BASEURL ?>/img/<?php echo $report['gambar']; ?>" alt="<?php echo $report['gambar']; ?>"></td>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>

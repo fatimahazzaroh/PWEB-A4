@@ -260,7 +260,7 @@ select:focus {
 }
 
 
-.action button {
+.action_button {
     color: white;
     background-color: #FF4167;
     width: 130px;

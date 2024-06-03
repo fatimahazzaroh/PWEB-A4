@@ -31,7 +31,7 @@ class Kamar_model {
         return $this->db->single();
     }
 
-    public function tambahKamar($data) {
+    public function addKamar($data) {
         $query = "INSERT INTO jenis_kamar (jenis_kamar, harga, deskripsi)
                     VALUES
                     (:jenis_kamar, :harga, :deskripsi)";

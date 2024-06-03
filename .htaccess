@@ -1,14 +1,7 @@
 Options -MultiViews
 
 RewriteEngine On
-<<<<<<< HEAD
     RewriteBase /PWEB/PWEB-A4-BARU/
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
-=======
-    RewriteBase /PWEB/PWEB-A4/
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
->>>>>>> dbabee18a9b5e9f09dd3ffe09b497ccdf2b1a95c

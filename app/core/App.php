@@ -16,10 +16,6 @@ class App {
             $this->controller = $url[0]; // Menjadikan url[0] sebagai controller
             unset($url[0]);
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> dbabee18a9b5e9f09dd3ffe09b497ccdf2b1a95c
         require_once './app/controllers/' . $this->controller . '.php';
         $this->controller = new $this->controller;
         // Method

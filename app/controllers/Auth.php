@@ -77,7 +77,7 @@ class Auth extends Controller
         if ( !$_SESSION[ 'user' ] ) {
             header( 'location:' . BASEURL . '/auth' );
         } else {
-            unset($_SESSION[ 'user' ] );
+            unset( $_SESSION[ 'user' ] );
             header( 'Location: ' . BASEURL . '/auth' );
         }
     }

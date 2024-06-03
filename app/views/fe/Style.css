@@ -229,21 +229,36 @@ select:focus {
     background-color: #621c8a;
 }
 
+.Kembali a {
+    color: white;
+    background-color: #FF4167;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 7%;
+}
+
 .Kembali {
     position: absolute;
     top: 20px;
     left: 30px;
 }
 
-.Kembali a {
+.Kembali button {
     color: white;
     background-color: #FF4167;
     font-size: 20px;
     height: 40px;
     width: 100px;
     text-align: center;
-    border-radius: 7%;
+    border-radius: 10%;
+    border: none;
+    cursor: pointer;
 }
+
+.Kembali button:hover {
+    background-color: #621c8a;
+}
+
 
 .action button {
     color: white;

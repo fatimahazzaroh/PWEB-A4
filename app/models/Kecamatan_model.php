@@ -1,10 +1,7 @@
 <?php
-
 class Kecamatan_model {
-
     private $table = 'kecamatan';
     private $db;
-
     public function __construct()
     {
         $this->db = new Database;

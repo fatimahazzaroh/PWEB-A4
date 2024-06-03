@@ -8,7 +8,6 @@ class Controller
     {
         require_once './app/views/' . $view . '.php';
     }
-
     // Untuk mengarahkan ke folder models
     public function model($model)
     {

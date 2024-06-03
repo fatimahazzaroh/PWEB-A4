@@ -8,7 +8,6 @@ class Flasher
             'tipe' => $tipe,
             'pesan' => $pesan,
             'aksi' => $aksi
-            
         ];
     }
 

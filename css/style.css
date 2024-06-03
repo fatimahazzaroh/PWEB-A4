@@ -1,3 +1,898 @@
+<<<<<<< HEAD
+:root {
+    --primary: rgb(255, 255, 255);
+    --bg: #62005F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: white;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    margin-top: 10px;
+    margin-bottom: 0;
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 250px; /* Adjusted for responsiveness */
+    height: 100vh;
+    background-color: var(--bg);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navbar-top {
+    margin-top: 20px;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.brand-name {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+.navbar-menu span {
+    margin-left: 10px;
+}
+
+.navbar-menu a {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-item {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+    border-radius: 12px;
+}
+
+.navbar-item:hover {
+    background-color: #FF4167;
+}
+
+.navbar-bottom {
+    margin-bottom: 25px;
+    margin-left: 30px;
+}
+
+.bottom-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.logout-button {
+    background-color: #FF4167;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 150px;
+    height: 45px;
+    border-radius: 12px;
+}
+
+.logout-button:hover {
+    background-color: #621c8a;
+}
+
+.navbar-item i {
+    margin-right: 10px;
+}
+
+.navbar-item-booking,
+.navbar-item-report,
+.navbar-item-kamar {
+    background-color: #FF4167;
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+    border-radius: 12px;
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 100%;
+    max-width: 1100px;
+    height: 600px;
+    background-color: #ffffff;
+    border-radius: 32px 32px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-table {
+    margin-top: 30px;
+    width: 95%;
+    overflow: auto;
+    border-radius: 8px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+thead tr th {
+    width: 1000px;
+}
+
+tbody tr td {
+    padding: 20px 20px;
+    text-align: center;
+}
+
+thead {
+    padding: 0;
+    text-align: center;
+    background-color: #62005F;
+    height: 60px;
+    font-weight: 200;
+}
+
+tbody {
+    background-color: #c57dc3;
+}
+
+.content h2 {
+    text-align: center;
+    margin-top: 50px;
+    color: #621c8a;
+}
+
+.content .garis {
+    width: auto;
+    background-color: #621c8a;
+    height: 2px;
+    text-align: center;
+}
+
+select {
+    width: 90%;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffffec;
+    font-size: 14px;
+}
+
+select:focus {
+    outline: none;
+    border-color: #62005F;
+    box-shadow: 0 0 5px rgba(98, 0, 95, 0.5);
+}
+
+.action button {
+    color: white;
+    background-color: #FF4167;
+    width: 80px;
+    height: 35px;
+    margin: 10px 25px 10px 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    border-radius: 10%;
+}
+
+.action button:hover {
+    color: white;
+    background-color: #621c8a;
+}
+
+.Kembali {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+.Kembali a {
+    color: white;
+    background-color: #FF4167;
+    font-size: 20px;
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    border-radius: 7%;
+}
+
+.action button {
+    color: white;
+    background-color: #FF4167;
+    width: 130px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 895px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 24px;
+}
+
+.action button:hover {
+    background-color: #621c8a;
+    color: #ffffff;
+}
+
+.Add {
+    border-radius: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+    }
+
+    .navbar-logo {
+        padding: 10px;
+    }
+
+    .navbar-menu {
+        margin-top: 0;
+        margin-left: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .navbar-item {
+        flex: 1 1 auto;
+        margin: 5px;
+    }
+
+    .content {
+        left: 0;
+        width: 100%;
+        max-width: none;
+    }
+
+    .action button {
+        margin-left: 0;
+        margin-right: auto;
+    }
+}
+
+
+
+
+/* Register */
+:root{
+    --primary: rgb(255, 255, 255);
+    --bg: #62005F;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: white;
+    overflow-y: hidden;
+}
+
+.navbaratas {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4 rem 7%;
+    border-bottom: 1px solid #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    margin-right: 0px;
+    background-color: #62005F;
+}
+
+
+.navbar-logo-atas {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    font-size: 22px; /* Ukuran font yang lebih besar */
+    font-weight: 400;
+    line-height: 24px;
+    color: #FBCE4D ; /* Warna teks putih */
+    font-style: normal;
+    font-family: 'Aclonica', sans-serif;
+}
+
+.navbar-logo-atas span {
+    margin-top: 10px;
+    margin-left: 5px;
+    color: #fff;
+}
+
+.logo {
+    margin-top: 10px;
+    margin-bottom: 0%;
+    width: 50px; /* Atur ukuran logo sesuai kebutuhan */
+    height: auto; /* Biarkan tinggi mengikuti proporsi aslinya */
+    margin-right: 0px; /* Jarak antara logo dan teks */
+    margin-left: 10px;
+}
+
+.gambar_homepage {
+    display: inline-block;
+    vertical-align: top; /* Mengatur posisi vertikal agar sejajar */
+    position: fixed;
+    width: 676px;
+    height: auto;
+    margin-top: 100px;
+    margin-left: 780px;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: 700px;
+    height: 620px;
+    left: 69px;
+    top: 85px;
+    background: rgba(228, 129, 226, 0.54);
+    border-radius: 40px;
+}
+.login-container h2{
+    margin-top: 5px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #161c2c;
+}
+.login-container p{
+    text-align: center;
+}
+.login-container p a{
+    color: #0B8FAC;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Email */
+.form-group label[for="email"],
+.form-group input[type="email"] {
+    display: flex;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #242E49;
+    width: 1000px;
+    margin-bottom: 5px;
+}
+
+.form-group label[for="email"] {
+    width: 50px;
+}
+
+.form-group input[type="email"] {
+    width: 80px;
+}
+#email{
+    background-color: #ffffff4d;
+    width: 500px;
+    height: 35px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* nama */
+.form-group label[for="nama"],
+.form-group input[type="nama"] {
+    display: flex;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #242E49;
+    width: 1000px;
+    margin-bottom: 10px;
+
+}
+
+.form-group label[for="nama"] {
+    width: 50px;
+}
+
+.form-group input[type="nama"] {
+    width: 80px;
+}
+
+#nama{
+    background-color: #ffffff4d;
+    width: 500px;
+    height: 35px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* notel */
+.form-group label[for="notel"],
+.form-group input[type="notel"] {
+    display: flex;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #242E49;
+    width: 1000px;
+    margin-bottom: 10px;
+}
+
+.form-group label[for="notel"] {
+    width: 50px;
+}
+
+.form-group input[type="notel"] {
+    width: 80px;
+}
+
+#notel{
+    background-color: #ffffff4d;
+    width: 500px;
+    height: 35px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* alamat */
+.form-group label[for="alamat"],
+.form-group input[type="alamat"] {
+    display: flex;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #242E49;
+    width: 1000px;
+    margin-bottom: 10px;
+
+}
+
+.form-group label[for="alamat"] {
+    width: 50px;
+}
+
+.form-group input[type="alamat"] {
+    width: 80px;
+}
+#alamat{
+    background-color: #ffffff4d;
+    width: 500px;
+    height: 35px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* Password */
+.form-group label[for="password"],
+.form-group input[type="password"] {
+    display: flex;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #242E49;
+    width: 1000px;
+    margin-bottom: 10px;
+
+}
+
+#password{
+    background-color: #ffffff4d;
+    width: 500px;
+    height: 35px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.form-group label[for="password"] {
+    width: 50px;
+}
+
+.form-group input[type="password"] {
+    width: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Group 1 */
+.form-submit button{
+    font-family: 'Poppins', sans-serif;
+    background-color: #FF4167;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    width: 500px;
+    height: 40px;
+    color: #fff;
+    
+}
+
+.form-submit button:hover {
+    background-color: #621c8a;
+}
+
+
+
+
+
+
+
+
+.navbar2 {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4 rem 7%;
+    border-bottom: 1px solid #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    margin-right: 0px;
+    background-color: #62005F;
+}
+
+.navbar-logo2 {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    font-size: 22px; /* Ukuran font yang lebih besar */
+    font-weight: 400;
+    line-height: 24px;
+    color: #FBCE4D ; /* Warna teks putih */
+    font-style: normal;
+    font-family: 'Aclonica', sans-serif;
+}
+
+.navbar-logo2 span {
+    margin-top: 10px;
+    margin-left: 5px;
+    color: #fff;
+}
+
+.logo2 {
+    margin-top: 10px;
+    margin-bottom: 0%;
+    width: 50px; /* Atur ukuran logo sesuai kebutuhan */
+    height: auto; /* Biarkan tinggi mengikuti proporsi aslinya */
+    margin-right: 0px; /* Jarak antara logo dan teks */
+    margin-left: 10px;
+}
+
+.gambar_homepage2 {
+    display: inline-block;
+    vertical-align: top; /* Mengatur posisi vertikal agar sejajar */
+    position: fixed;
+    width: 676px;
+    height: auto;
+    margin-top: 100px;
+    margin-left: 780px;
+}
+
+.login-container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: 700px;
+    height: 550px;
+    left: 69px;
+    top: 141px;
+    background: rgba(228, 129, 226, 0.54);
+    border-radius: 40px;
+}
+
+.login-container2 h2{
+    margin-top: -10px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #161c2c;
+}
+
+.login-container2 p{
+    text-align: center;
+}
+
+.login-container2 p a{
+    color: #0B8FAC;
+}
+
+.form-container2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Email */
+.form-group2 label[for="email2"],
+.form-group2 input[type="email2"] {
+    display: flex;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #242E49;
+    width: 1000px;
+    margin-bottom: 10px;
+}
+
+.form-group2 label[for="email2"] {
+    width: 57px;
+}
+
+.form-group2 input[type="email2"] {
+    width: 100px;
+}
+
+/* Password */
+.form-group2 label[for="password2"],
+.form-group2 input[type="password2"] {
+    display: flex;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #242E49;
+    width: 1000px;
+    margin-bottom: 10px;
+}
+
+#email2{
+    background-color: #ffffff4d;
+    width: 500px;
+    height: 45px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+#password2{
+    background-color: #ffffff4d;
+    width: 500px;
+    height: 45px;
+    border-radius: 12px;
+    margin-bottom: 80px;
+}
+
+.form-group2 label[for="password2"] {
+    width: 100px;
+}
+
+.form-group2 input[type="password2"] {
+    width: 100px;
+}
+
+/* Group 2 */
+.forgot-password {
+    width: 507.68px;
+    height: 52.69px;
+    margin-top: 5px;
+    margin-left: 470px;
+}
+.forgot-password a{
+    font-size: 14px;
+    color: #000000;
+    border-bottom: solid black 1px;
+}
+
+
+
+/* Enter Your Email */
+.forgot-password .enter-email {
+    height: 14px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #858585;
+}
+
+/* Group 1 */
+.form-submit button{
+    font-family: 'Poppins', sans-serif;
+    background-color: #FF4167;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    width: 500px;
+    height: 50px;
+    color: #fff;
+}
+
+.form-submit button:hover {
+    background-color: #621c8a;
+}
+
+.h1h4 button {
+    background-color: #FF4167; /* Warna latar belakang yang mencolok */
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 15px 55px; /* Tambahkan padding agar kelihatan lebih besar */
+    border: none; /* Hapus border-width dan border-top */
+    border-radius: 40px; /* Tambahkan border-radius agar tampilan lebih halus */
+    transition: background-color 0.3s ease; /* Efek transisi untuk perubahan warna latar belakang saat hover */
+    display: flex; /* Gunakan flexbox */
+    justify-content: center; /* Menengahkan konten */
+    align-items: center; /* Menengahkan konten */
+    line-height: 1; /* Menengahkan konten vertikal */
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.h1h4{
+    height: 725px;
+}
+.h1h4 button:hover {
+    background-color: #621c8a; /* Warna latar belakang saat hover */
+}
+
+.tengah {
+    display: flex;
+    flex-direction: row;
+} 
+
+h1 {
+    margin-top: 170px;
+    margin-left: 50px;
+    font-size: 55px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    line-height: 79px;
+}
+
+h4 {
+    margin-left: 50px;
+    margin-top: 5px;
+    font-size: 20px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    line-height: 36px;
+}
+
+.navbarbar {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4 rem 7%;
+    border-bottom: 1px solid #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    margin-right: 0px;
+    background-color: #62005F;
+}
+
+.navbar-logoo {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    font-size: 22px; /* Ukuran font yang lebih besar */
+    font-weight: 400;
+    line-height: 24px;
+    color: #FBCE4D ; /* Warna teks putih */
+    font-style: normal;
+    font-family: 'Aclonica', sans-serif;
+}
+
+.navbar-logoo span {
+    margin-top: 10px;
+    margin-left: 5px;
+    color: #fff;
+}
+
+/* .logoo {
+    margin-top: 10px;
+    margin-bottom: 0%;
+    width: 50px; /* Atur ukuran logo sesuai kebutuhan */
+    height: auto; /* Biarkan tinggi mengikuti proporsi aslinya */
+    margin-right: 0px; /* Jarak antara logo dan teks */
+    margin-left: 10px;
+} */
+=======
 
     :root {
         --primary: rgb(255, 255, 255);
@@ -191,3 +1086,4 @@
         height: 2px;
         text-align: center;
     }
+>>>>>>> dbabee18a9b5e9f09dd3ffe09b497ccdf2b1a95c

@@ -16,7 +16,7 @@ class Alamat_model {
         $this->db->bind('kecamatan_id', $data['kecamatan_id']);
         $this->db->bind('alamat', $data['alamat']);
         $this->db->execute();
-        return $this->db->rowCount();
+        // return $this->db->rowCount();
 
         // Mengembalikan ID alamat yang baru saja diinsert
         return $this->db->lastInsertId();

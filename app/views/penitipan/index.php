@@ -18,6 +18,7 @@
                     <?php if ($data['roles_id'] == 2): // Jika admin ?>
                         <th>Aksi</th>
                     <?php endif; ?>
+                    
                     </tr>
                 </thead>
                 <tbody>

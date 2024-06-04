@@ -14,13 +14,22 @@
             </ul>
         </div>
         <div class="navbar-bottom">
-            <a href="<?= BASEURL; ?>/auth/logout" class="bottom-item">
-                <button class="logout-button">Log Out</button>
-            </a>
+            
 
             <a href="#" class="bottom-item">
                 <i data-feather="user"></i>
-                <span>Staff</span>
+                <?php if ($data['roles_id'] == 1) : ?>
+                <span>Owner</span>
+                <?php endif; ?>
+                <?php if ($data['roles_id'] == 2) : ?>
+                <span>Adimn</span>
+                <?php endif; ?>
+                <?php if ($data['roles_id'] == 3) : ?>
+                <span>Customer</span>
+                <?php endif; ?>
+            </a>
+            <a href="<?= BASEURL; ?>/auth/logout" class="bottom-item">
+                <button class="logout-button">Log Out</button>
             </a>
         </div>
     </nav>

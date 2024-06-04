@@ -49,15 +49,16 @@ class Auth extends Controller
 
         // var_dump($user);die;
 
+        // var_dump($user);die;
         if ($user) {
             session_regenerate_id(true);
             $_SESSION['user'] = [
-                'id'=> $user->id,
-                'email' => $user->email,
-                'roles_id' => $user->roles_id,
+                'id'=> $user['id'],
+                'email' => $user['email'],
+                'roles_id' => $user['roles_id'],
             ];
             // Debugging: Periksa isi session setelah login
-            // var_dump($_SESSION);
+            // var_dump($_SESSION);die;
             setcookie('user_session', session_id(), time() + 3600, '/', null, true, true);
             header( 'Location: ' . BASEURL .'/kamar' );
             exit;

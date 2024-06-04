@@ -9,26 +9,18 @@ class Kamar_model {
     }
 
     public function getAllKamar() {
-        $this->db->query('SELECT * FROM jenis_kamar');
-        $jenisKamarList = $this->db->resultSet();
-
-        foreach ($jenisKamarList as $jenisKamar) {
-            $jenisKamar['active_count'] = $this->countKamar($jenisKamar['id']);
-        }
-        return $jenisKamarList;
-    }
-    
-    public function countKamar($jenis_kamar_id){
-        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE jenis_kamar_id=:jenis_kamar_id AND status = "enable"');
-        $this->db->bind('jenis_kamar_id', $jenis_kamar_id);
-        $this->db->execute();
-        return $this->db->rowCount();
+        $this->db->query('SELECT jk.*, COUNT(k.status) as total
+        FROM jenis_kamar jk JOIN kamar k ON jk.id = k.jenis_kamar_id
+        WHERE k.status = "enable"
+        GROUP BY jk.id');
+        return $this->db->resultSet();
     }
 
-    public function getKamarById($id){
+    public function getKamarById($id) {
         $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
         $this->db->bind('id', $id);
-        return $this->db->single();
+        $this->db->execute();
+        return $this->db->resultSet();
     }
 
     public function addKamar($data) {
@@ -42,4 +34,16 @@ class Kamar_model {
         $this->db->execute();
         return $this->db->rowCount();
     }
+    public function updateKamar($id, $data) { }
+    public function getJenisKamar() {
+        $this->db->query('SELECT * FROM jenis_kamar');
+        return $this->db->resultSet();
+    }
+
+    public function getNoKamar() {
+        $this->db->query('SELECT no_kamar FROM ' . $this->table . ' WHERE status = "enable"');
+        return $this->db->resultSet();
+    }
+
+    
 }

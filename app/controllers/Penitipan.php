@@ -28,4 +28,11 @@ class Penitipan extends Controller {
             exit;
         }
     }
+    public function addPenitipan(){
+        $data['jenisKamar'] = $this->model('Kamar_model')->getJenisKamar();
+        $data['no_kamar'] = $this->model('Kamar_model')->getNoKamar($jenis_kamar_id);
+        // if (isset($_POST['Tanggal_masuk']) && $_POST['Tanggal_keluar'])
+    }
+    
+    
 }

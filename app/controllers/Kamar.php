@@ -8,6 +8,8 @@ class Kamar extends Controller {
         } else {
             $data[ 'judul' ] = 'Daftar Kamar';
             $data[ 'kamar' ] = $this->model( 'Kamar_model' )->getAllKamar();
+            $data[ 'jenis_kamar' ] = $this->model( 'Kamar_model' )->getJenisKamar();
+            $data['no_kamar'] = $this->model('Kamar_model')->getNoKamar();
             $data['roles_id'] = $_SESSION['user']['roles_id'];
 
             var_dump($data['roles_id']);

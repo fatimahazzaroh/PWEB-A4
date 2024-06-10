@@ -19,18 +19,20 @@
                 <input type="text" id="nama" name="nama" required>
             </div>
             <div class="form-group">
-                <label for="no_telp" class="notel">No telepon</label>
-                <input type="text" id="no_telp" name="no_telp" required>
+                <label for="no_telp" class="no_telp">No telepon</label>
+                <div class="form-input">
+                <input type="text" id="no_telp" name="no_telp" required></div>
             </div>
             <!-- tolong di style -->
-            <div>
-                <label for="kecamalan">Kecamatan</label>
+            <div class="kecamatan">
+                <label for="kecamatan">Kecamatan</label>
+                <div class="form-input">
                 <select name="kecamatan_id" id="kecamatan" required>
                 <option value="">Pilih Kecamatan</option>
                 <?php foreach ($data['kecamatan'] as $kecamatan) : ?>
                     <option value="<?= $kecamatan['id'] ?>"><?= $kecamatan['kecamatan'] ?></option>
                 <?php endforeach; ?>
-                </select>
+                </select></div>
             </div>
 
             <div class="form-group">

@@ -1,5 +1,5 @@
 <!-- Navbar -->
-    <nav class="navbar2">
+<nav class="navbar2">
         <a href="#" class="navbar-logo2">
             <img src="<?= BASEURL; ?>/img/logo.svg" alt="Logo" class="logo2">
             <span>Elliot</span>
@@ -10,11 +10,13 @@
         <form action="<?= BASEURL . '/auth/sessionLogin' ?>" method="post" class="form-container2">
             <div class="form-group2">
                 <label for="email" class="email2">Email</label>
-                <input type="email" id="email" name="email" class="email2" required>
+                <div class="form-input">
+                <input type="email" id="email" name="email" class="email2" required></div>
             </div>
             <div class="form-group2">
                 <label for="password" class="password2">Password</label>
-                <input type="password" id="password" name="password" class="password2" required>
+                <div class="form-input">
+                <input type="password" id="password" name="password" class="password2" required></div>
             </div>
             <div class="form-submit">
                 <button type="submit" class="submit-btn">Masuk</button>

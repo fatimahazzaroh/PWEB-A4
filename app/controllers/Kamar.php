@@ -49,4 +49,36 @@ class Kamar extends Controller {
             exit;
         }
     }
+
+    public function editKamar($id) {
+        if (isset($_POST['jenis_kamar']) && isset($_POST['harga']) && isset($_POST['deskripsi'])) {
+            if ($this->model('Kamar_model')->editKamar($id, $_POST) > 0) {
+                Flasher::setFlash('berhasil', 'diubah', 'success');
+                header('location: ' . BASEURL . '/kamar');
+                exit;
+            } else {
+                Flasher::setFlash('gagal', 'diubah', 'danger');
+                header('location: ' . BASEURL . '/kamar');
+                exit;
+            }
+        } else {
+            Flasher::setFlash('gagal', 'diubah', 'danger');
+            header('location: ' . BASEURL . '/kamar');
+            exit;
+        }
+    }
+
+    public function getKamarById($id) {
+        echo json_encode($this->model('Kamar_model')->getKamarById($id));
+    }    
+
+    public function updateKamar() {
+        if ($this->model('Kamar_model')->updateKamar($_POST['id']) > 0) {
+            Flasher::setFlash('berhasil', 'diubah', 'success');
+        } else {
+            Flasher::setFlash('gagal', 'diubah', 'danger');
+        }
+        header('location: ' . BASEURL . '/kamar');
+        exit;
+    }
 }

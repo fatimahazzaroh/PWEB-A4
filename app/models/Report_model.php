@@ -7,7 +7,10 @@ class Report_model {
         $this->db = new Database;
     }
     public function getLaporanByPenitipanId($penitipan_id) {
-        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE penitipan_id = :penitipan_id');
+        $this->db->query('SELECT penitipan.*, laporan.*, individuals.* FROM laporan
+        JOIN penitipan ON laporan.penitipan_id = penitipan.id 
+        JOIN individuals ON penitipan.individuals_id = individuals.id 
+        WHERE penitipan_id = :penitipan_id');
         $this->db->bind('penitipan_id', $penitipan_id);
         return $this->db->resultSet();
     }
@@ -31,4 +34,15 @@ class Report_model {
         $this->db->execute();
         return $this->db->rowCount();
     }
+
+    // public function getAllReportbyUserId($user_id) {
+    //     $this->db->query('SELECT * FROM ' . $this->table . ' 
+    //     JOIN penitipan ON laporan.penitipan_id = penitipan.id 
+    //     JOIN individuals ON penitipan.individuals_id = individuals.id 
+    //     WHERE penitipan.individuals_id = :user_id');
+    //     $this->db->bind('user_id', $user_id);
+    //     return $this->db->resultSet();
+    // }
+
+
 }

@@ -31,7 +31,7 @@
                         <td><?= $penitipan['tanggal_keluar'] ?></td>
                         <td><?= $penitipan['jenis_kamar'] ?></td>
                         <td><?= $penitipan['no_kamar'] ?></td>
-                        <td><a href="path/to/report1.pdf" target="_blank">Laporan</a></td>
+                        <td><a href="<?= BASEURL ?>/riwayat/downloadPDF/<?= $penitipan['id'] ?>" class="btn btn-primary" target="_blank">Download PDF</a></td>
                         <td>Rp.100.000</td>
                     </tr>
                     <?php endforeach; ?>

@@ -18,4 +18,22 @@ class Riwayat extends Controller
             $this->view('templates/footer');
         }
     }
+
+    // public function downloadPDF($penitipan_id) {
+    //     $data['penitipan_id'] = $penitipan_id;
+    //     $data['id'] = $_SESSION['user']['id'];
+    //     $data['report'] = $this->model('Report_model')->getLaporanByPenitipanId($penitipan_id);            
+    //     $this->view('templates/header', $data);
+    //     $this->view('riwayat/print', $data);
+    //     $this->view('templates/footer');
+    // }
+
+    public function downloadPDF($penitipan_id) {
+        // Mendapatkan data laporan berdasarkan penitipan_id
+        $data['report'] = $this->model('Report_model')->getLaporanByPenitipanId($penitipan_id); 
+    
+        // Include template PDF
+        $this->view('riwayat/pdf', $data);
+    }
+    
 }

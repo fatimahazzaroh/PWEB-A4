@@ -27,11 +27,13 @@ class Penitipan_model {
     return $this->db->resultSet();
     }
 
-    public function updateStatusBooking($id, $status) {
-        $query = "UPDATE $this->table SET status = :status WHERE id = :id";
+    public function updateStatus($id, $status_id) {
+        $query = "UPDATE $this->table SET status_id = :status_id WHERE id = :id";
+        // var_dump($query);
+        // die();
         $this->db->query($query);
         $this->db->bind('id', $id);
-        $this->db->bind('status', $status);
+        $this->db->bind('status_id', $status_id);
         $this->db->execute();
         return $this->db->rowCount();
     }
@@ -73,4 +75,21 @@ class Penitipan_model {
         }
     return $this->db->resultSet();
     }
+
+    public function addPenitipan($data) {
+        $query = "INSERT INTO $this->table 
+                    (individuals_id, tanggal_masuk, tanggal_keluar, kamar_id, nama_kucing, status_id) 
+                VALUES 
+                    (:individuals_id, :tanggal_masuk, :tanggal_keluar, :kamar_id, :nama_kucing, :status_id)";
+        $this->db->query($query);
+        $this->db->bind('individuals_id', $_SESSION['user']['id']); // Menggunakan id pengguna dari sesi
+        $this->db->bind('tanggal_masuk', $data['tanggal_masuk']);
+        $this->db->bind('tanggal_keluar', $data['tanggal_keluar']);
+        $this->db->bind('kamar_id', $data['kamar_id']);
+        $this->db->bind('nama_kucing', $data['nama_kucing']);
+        $this->db->bind('status_id', $data['status_id']);
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
+    
 }

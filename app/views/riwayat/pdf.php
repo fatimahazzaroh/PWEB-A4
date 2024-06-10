@@ -49,6 +49,12 @@ foreach ($data['report'] as $index => $report) {
 }
 $html .= '</tbody>';
 $html .= '</table>';
+
+$html .= '<div class="container-payment" align="right">';
+$html .= '<p>Jumlah Pembayaran: <strong>Rp500.000</strong></p>';  // Corrected formatting for strong tag
+$html .= '<p>Status Pembayaran:<strong> Lunas</strong></p>'; // Corrected formatting for strong tag
+$html .= '</div>';
+
 $html .= '</div>';
 $html .= '</div>';
 

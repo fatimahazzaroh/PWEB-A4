@@ -48,7 +48,7 @@ class Penitipan_model {
 
     public function getAllPenitipanDone($roles_id, $individuals_id) {
         $query ='
-            SELECT i.nama, jk.jenis_kamar, k.no_kamar
+            SELECT p.*, i.nama, jk.jenis_kamar, k.no_kamar
             FROM ' . $this->table . ' p
             JOIN individuals i ON p.individuals_id = i.id
             JOIN kamar k ON p.kamar_id = k.id

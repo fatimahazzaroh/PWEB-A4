@@ -21,7 +21,7 @@
                 <span>Owner</span>
                 <?php endif; ?>
                 <?php if ($data['roles_id'] == 2) : ?>
-                <span>Adimn</span>
+                <span>Admin</span>
                 <?php endif; ?>
                 <?php if ($data['roles_id'] == 3) : ?>
                 <span>Customer</span>

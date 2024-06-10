@@ -15,7 +15,8 @@
                     <th>Tanggal keluar</th>
                     <th>Jenis Kamar</th>
                     <th>No. Kamar</th>
-                    <?php if ($data['roles_id'] == 1): // Jika admin ?>
+                    <th>Laporan</th>
+                    <?php if ($data['roles_id'] == 2): // Jika admin ?>
                         <th>Aksi</th>
                     <?php endif; ?>
                     </tr>
@@ -32,7 +33,7 @@
                         <td><?= $penitipan['tanggal_keluar'] ?></td>
                         <td><?= $penitipan['jenis_kamar'] ?></td>
                         <td><?= $penitipan['no_kamar'] ?></td>
-                        <td><a href="<?= BASEURL ?>/report/detailReport/<?= $penitipan['id'] ?>">Lihat Report</a></td>
+                        <td><a href="<?= BASEURL ?>/report/detailReport/<?= $penitipan['id'] ?>">Lihat Laporan</a></td>
                         <?php if ($data['roles_id'] == 2): // Jika admin ?>
                         <td>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmModal" data-id="<?= $penitipan['id'] ?>">Konfirm</button>

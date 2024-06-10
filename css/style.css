@@ -545,7 +545,7 @@ body{
     color: #000000;
     width: 1000px;
     margin-bottom: 10px;
-
+    font-family: 'Poppins', sans-serif;
 }
 
 .form-group label[for="kecamatan"] {

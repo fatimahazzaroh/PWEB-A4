@@ -16,7 +16,6 @@
                     <th>Jenis Kamar</th>
                     <th>No. Kamar</th>
                     <th>Laporan</th>
-                    <th>Total Pembayaran</th>
                     </tr>
                 </thead>
                 <tbody>

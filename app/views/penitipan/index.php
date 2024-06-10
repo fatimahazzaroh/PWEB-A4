@@ -32,6 +32,7 @@
                         <td><?= $penitipan['tanggal_keluar'] ?></td>
                         <td><?= $penitipan['jenis_kamar'] ?></td>
                         <td><?= $penitipan['no_kamar'] ?></td>
+                        <!-- <td><?= $penitipan['id'] ?></td> -->
                         <?php if ($data['roles_id'] == 2): // Jika admin ?>
                         <td>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmModal" data-id="<?= $penitipan['id'] ?>">Konfirm</button>
@@ -58,7 +59,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                     <form id="confirmForm" method="POST" action="<?= BASEURL; ?>/penitipan/updateStatusBooking">
-                        <input type="hidden" id="penitipanId" name="penitipan_id" value="">
+                        <input  id="penitipanId" name="id" value="">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>

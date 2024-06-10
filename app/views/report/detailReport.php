@@ -28,7 +28,7 @@
                         <td><?= $index + 1 ?></td>
                         <td><?= $report['tanggal'] ?></td>
                         <td><?= $report['deskripsi'] ?></td>
-                        <td><img src="<?= BASEURL ?>/img/<?php echo $report['gambar']; ?>" alt="<?php echo $report['gambar']; ?>"></td>
+                        <td><img src="<?= BASEURL . $report['gambar']; ?>"></td>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>

@@ -19,6 +19,25 @@ class Report extends Controller
         }
     }
 
+    public function updateStatusProgress() {
+        if (!isset($_SESSION['user']) || $_SESSION['user']['roles_id'] != 2) {
+            header('Location: ' . BASEURL . '/auth');
+            exit;
+        }
+        
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $id = $_POST['id'];
+            $status_id = 3; // Status yang baru
+            if ($this->model('Penitipan_model')->updateStatus($id, $status_id) > 0) {
+                Flasher::setFlash('Status berhasil diubah.', 'success', '');
+            } else {
+                Flasher::setFlash('Status gagal diubah.', 'danger', '');
+            }
+            header('Location: ' . BASEURL . '/report');
+            exit;
+        }
+    }
+
     public function detailReport($penitipan_id)
     {
         if (!isset($_SESSION['user'])) {

@@ -17,20 +17,19 @@ class Penitipan extends Controller {
         }
     }    
     public function updateStatusBooking() {
-        // var_dump($_POST);
-        // die;
         if (!isset($_SESSION['user']) || $_SESSION['user']['roles_id'] != 2) {
             header('Location: ' . BASEURL . '/auth');
             exit;
         }
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $id = $_POST['penitipan_id'];
+            $id = $_POST['id'];
             $status_id = 2; // Status yang baru
-            var_dump($_POST);
-            if ($this->model('Penitipan_model')->updateStatusBooking($id, $status_id) > 0) {
+            if ($this->model('Penitipan_model')->updateStatus($id, $status_id) > 0) {
                 Flasher::setFlash('Status berhasil diubah.', 'success', '');
             } else {
+                // var_dump('po');
+                // die();
                 Flasher::setFlash('Status gagal diubah.', 'danger', '');
             }
             header('Location: ' . BASEURL . '/penitipan');
@@ -38,27 +37,7 @@ class Penitipan extends Controller {
         }
     }
 
-    public function updateStatusProgress() {
-        // var_dump($_POST);
-        // die;
-        if (!isset($_SESSION['user']) || $_SESSION['user']['roles_id'] != 2) {
-            header('Location: ' . BASEURL . '/auth');
-            exit;
-        }
-        
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $id = $_POST['penitipan_id'];
-            $status_id = 3; // Status yang baru
-            var_dump($_POST);
-            if ($this->model('Penitipan_model')->updateStatusProgress($id, $status_id) > 0) {
-                Flasher::setFlash('Status berhasil diubah.', 'success', '');
-            } else {
-                Flasher::setFlash('Status gagal diubah.', 'danger', '');
-            }
-            header('Location: ' . BASEURL . '/penitipan');
-            exit;
-        }
-    }
+    
     // public function addPenitipan(){
     //     $data['jenisKamar'] = $this->model('Kamar_model')->getJenisKamar();
     //     $data['no_kamar'] = $this->model('Kamar_model')->getNoKamar($jenis_kamar_id);

@@ -1,15 +1,15 @@
 $(function() {  
     $('.tombolTambahDataKamar').on('click', function() {
-        $$('#formModalKamarLabel').html('Tambah Data Kamar');
+        $$('#formKamarLabel').html('Tambah Data Kamar');
         $('.modal-footer button[type=submit]').html('Tambah Data');
         $('#jenis_kamar').val('');
         $('#harga').val('');
         $('#deskripsi').val('');
     });
 
-    $('.tampilModalUbah').on('click', function(){
+    $('.tampilModalUbahKamar').on('click', function(){
         
-        $('#formModalKamarLabel').html('Ubah Data Kamar');
+        $('#formKamarLabel').html('Ubah Data Kamar');
         $('.modal-footer button[type=submit]').html('Ubah Data');
         $('.modal-body form').attr('action', 'http://localhost/PWEB-A9/kamar/updateKamar')
 

@@ -9,8 +9,8 @@ class Penitipan_model {
 
     public function getAllPenitipanBooking($roles_id, $individuals_id) {
         $query ='
-            SELECT p.*, i.*, k.*, jk.*
-            FROM ' . $this->table . ' p
+            SELECT p.*, i.nama, jk.jenis_kamar, k.no_kamar
+            FROM penitipan p
             JOIN individuals i ON p.individuals_id = i.id
             JOIN kamar k ON p.kamar_id = k.id
             JOIN jenis_kamar jk ON k.jenis_kamar_id = jk.id
@@ -27,20 +27,9 @@ class Penitipan_model {
     return $this->db->resultSet();
     }
 
-    public function updateStatus($id, $status_id) {
-        $query = "UPDATE $this->table SET status_id = :status_id WHERE id = :id";
-        // var_dump($query);
-        // die();
-        $this->db->query($query);
-        $this->db->bind('id', $id);
-        $this->db->bind('status_id', $status_id);
-        $this->db->execute();
-        return $this->db->rowCount();
-    }
-
     public function getAllPenitipanProgress($roles_id, $individuals_id) {
         $query ='
-            SELECT p.*, i.*, k.*, jk.*
+            SELECT p.*, i.nama, jk.jenis_kamar, k.no_kamar
             FROM ' . $this->table . ' p
             JOIN individuals i ON p.individuals_id = i.id
             JOIN kamar k ON p.kamar_id = k.id
@@ -59,7 +48,7 @@ class Penitipan_model {
 
     public function getAllPenitipanDone($roles_id, $individuals_id) {
         $query ='
-            SELECT p.*, i.*, k.*, jk.*
+            SELECT i.nama, jk.jenis_kamar, k.no_kamar
             FROM ' . $this->table . ' p
             JOIN individuals i ON p.individuals_id = i.id
             JOIN kamar k ON p.kamar_id = k.id
@@ -88,6 +77,17 @@ class Penitipan_model {
         $this->db->bind('kamar_id', $data['kamar_id']);
         $this->db->bind('nama_kucing', $data['nama_kucing']);
         $this->db->bind('status_id', $data['status_id']);
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
+
+    public function updateStatus($id, $status_id) {
+        // $status_id = 2;
+        $query = "UPDATE $this->table SET status_id = :status_id WHERE id = :id";
+        // var_dump($query);
+        $this->db->query($query);
+        $this->db->bind(':id', $id);
+        $this->db->bind(':status_id', $status_id); 
         $this->db->execute();
         return $this->db->rowCount();
     }

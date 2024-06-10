@@ -132,29 +132,10 @@
     </div>
 </div>
 
-<!-- <script>
-    $(document).ready(function() {
-        $('.editKamarButton').on('click', function() {
-            const id = $(this).data('id');
-            $.ajax({
-                url: '<?= BASEURL; ?>/kamar/getKamarById/' + id,
-                method: 'GET',
-                dataType: 'json',
-                success: function(data) {
-                    $('#formKamarLabel').text('Edit Kamar');
-                    $('#kamar_id').val(data.id);
-                    $('#jenis_kamar').val(data.jenis_kamar);
-                    $('#harga').val(data.harga);
-                    $('#deskripsi').val(data.deskripsi);
-                    $('#kamarForm').attr('action', '<?= BASEURL; ?>/kamar/updateKamar');
-                }
-            });
-        });
 
-        $('#formKamar').on('hidden.bs.modal', function () {
-            $('#formKamarLabel').text('Tambah Kamar');
-            $('#kamarForm').trigger('reset');
-            $('#kamarForm').attr('action', '<?= BASEURL; ?>/kamar/addKamar');
-        });
-    });
-</script> -->
+<script>
+        feather.replace();
+    </script>
+
+<script src="https://unpkg.com/feather-icons"></script>
+

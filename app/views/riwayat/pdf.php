@@ -1,6 +1,6 @@
 <!-- pdf.php -->
 <?php
-require_once BASEURL . '/vendor/autoload.php';
+// require_once BASEURL . '/vendor/autoload.php';
 
 // Initialize PDF object
 $mpdf = new \Mpdf\Mpdf();
@@ -29,13 +29,13 @@ foreach ($data['report'] as $index => $report) {
 
 // Table for additional report details
 $html .= '<div class="container-table">';
-$html .= '<table>';
+$html .= '<table border="1" cellpadding="10" cellspacing="0">';
 $html .= '<thead>';
 $html .= '<tr>';
 $html .= '<th>No</th>';
 $html .= '<th>Tanggal</th>';
 $html .= '<th>Deskripsi</th>';
-$html .= '<th>Gambar</th>';
+$html .= '<th style="width: 170px;">Gambar</th>'; // Adjust width here
 $html .= '</tr>';
 $html .= '</thead>';
 $html .= '<tbody>';

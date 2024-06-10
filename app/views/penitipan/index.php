@@ -3,7 +3,7 @@
         <h2>PENITIPAN ELLIOT PETCARE</h2>
         <div class="garis"></div>
         <div class="container-table">
-            <table class="table">
+            <table>
                 <thead>
                     <tr>
                         <th>No</th>
@@ -32,7 +32,6 @@
                         <td><?= $penitipan['tanggal_keluar'] ?></td>
                         <td><?= $penitipan['jenis_kamar'] ?></td>
                         <td><?= $penitipan['no_kamar'] ?></td>
-                        <!-- <td><?= $penitipan['id'] ?></td> -->
                         <?php if ($data['roles_id'] == 2): // Jika admin ?>
                         <td>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmModal" data-id="<?= $penitipan['id'] ?>">Konfirm</button>
@@ -78,3 +77,7 @@
             inputPenitipanId.value = id; // Set nilai input penitipan_id dengan ID yang sesuai
         });
     </script>
+    <script>
+        feather.replace();
+    </script>
+    <script src="https://unpkg.com/feather-icons"></script>

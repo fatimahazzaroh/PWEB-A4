@@ -31,8 +31,7 @@
                         <td><?= $penitipan['tanggal_keluar'] ?></td>
                         <td><?= $penitipan['jenis_kamar'] ?></td>
                         <td><?= $penitipan['no_kamar'] ?></td>
-                        <td><a href="<?= BASEURL ?>/riwayat/downloadPDF/<?= $penitipan['id'] ?>" class="btn btn-primary" target="_blank">Download PDF</a></td>
-                        <td>Rp.100.000</td>
+                        <td><a href="<?= BASEURL ?>/riwayat/downloadPDF?id=<?= $penitipan['id'] ?>" class="btn btn-primary" target="_blank">Download PDF</a></td>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>
@@ -40,6 +39,8 @@
         </div>
     </div>
     </section>
-    <script>
+<script>
         feather.replace();
     </script>
+
+<script src="https://unpkg.com/feather-icons"></script>

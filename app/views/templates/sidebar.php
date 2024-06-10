@@ -7,15 +7,14 @@
                 <span class="brand-name">Elliot</span>
             </a>
             <ul class="navbar-menu">
-                <li><a href="<?= BASEURL; ?> /kamar" class="navbar-item-kamar"><i data-feather="home"></i><span>Kamar</span></a></li>
+                <li><a href="<?= BASEURL; ?> /kamar" class="navbar-item"><i data-feather="home"></i><span>Kamar</span></a></li>
                 <li><a href="<?= BASEURL; ?> /penitipan" class="navbar-item"><i data-feather="book-open"></i><span>Booking</span></a></li>
                 <li><a href="<?= BASEURL; ?> /report" class="navbar-item"><i data-feather="archive"></i><span>Report</span></a></li>
                 <li><a href="<?= BASEURL; ?> /riwayat" class="navbar-item"><i data-feather="bookmark"></i><span>Riwayat</span></a></li>
             </ul>
         </div>
         <div class="navbar-bottom">
-            
-
+        
             <a href="#" class="bottom-item">
                 <i data-feather="user"></i>
                 <?php if ($data['roles_id'] == 1) : ?>
@@ -39,4 +38,3 @@
     </script>
 
 <script src="https://unpkg.com/feather-icons"></script>
-    <!-- navbar side end -->

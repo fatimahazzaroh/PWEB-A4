@@ -1,6 +1,6 @@
 <div class="content">
         <!-- Content area -->
-        <h2>PENITIPAN ELLIOT PETCARE</h2>
+        <h2>LAPORAN PENITIPAN <br> ELLIOT PETCARE</h2>
         <div class="garis"></div>
         <div class="container-table">
             <table>
@@ -79,3 +79,7 @@
             inputPenitipanId.value = id; // Set nilai input penitipan_id dengan ID yang sesuai
         });
     </script>
+    <script>
+        feather.replace();
+    </script>
+    <script src="https://unpkg.com/feather-icons"></script>

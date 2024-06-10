@@ -23,6 +23,6 @@
         <p class="sign-up-link">Belum punya akun? <a href="<?= BASEURL . '/auth/halregister' ?>">Sign Up</a></p>
     </div>
 
-    <div class="gambarhomepage2">
-        <img src="<?= BASEURL; ?>/img/Bghomepage.png" class="gambar_homepage2">
-    </div>
+    <div class="gambar_homepage2">
+    <img src="<?= BASEURL; ?>/img/Bghomepage.png" class="background_image">
+    <img src="<?= BASEURL; ?>/img/logokucing.png" class="logokucing"></div>

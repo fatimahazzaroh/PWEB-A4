@@ -53,6 +53,6 @@
         <p class="sign-up-link">Sudah punya akun? <a href="<?= BASEURL; ?>/auth">Login</a></p>
     </div>
 
-    <div class="gambarhomepage">
-        <img src="<?= BASEURL; ?>/img/Bghomepage.png" class="gambar_homepage">
-    </div>
+    <div class="gambar_homepage2">
+    <img src="<?= BASEURL; ?>/img/Bghomepage.png" class="background_image">
+    <img src="<?= BASEURL; ?>/img/logokucing.png" class="logokucing"></div>

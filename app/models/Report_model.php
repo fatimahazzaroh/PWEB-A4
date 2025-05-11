@@ -7,13 +7,15 @@ class Report_model {
         $this->db = new Database;
     }
     public function getLaporanByPenitipanId($penitipan_id) {
-        $this->db->query('SELECT penitipan.*, laporan.*, individuals.* FROM laporan
-        JOIN penitipan ON laporan.penitipan_id = penitipan.id 
-        JOIN individuals ON penitipan.individuals_id = individuals.id 
-        WHERE penitipan_id = :penitipan_id');
-        $this->db->bind('penitipan_id', $penitipan_id);
-        return $this->db->resultSet();
-    }
+    $this->db->query('SELECT penitipan.*, ' . $this->table . '.*, individuals.* 
+                      FROM '. $this->table .'
+                      JOIN penitipan ON ' . $this->table . '.penitipan_id = penitipan.id 
+                      JOIN individuals ON penitipan.individuals_id = individuals.id 
+                      WHERE '. $this->table . '.penitipan_id = :penitipan_id');
+    $this->db->bind('penitipan_id', $penitipan_id);
+    return $this->db->resultSet();
+}
+
     
     public function addLaporan($data, $penitipan_id) {
         $date = date("Y-m-d H:i:s");
